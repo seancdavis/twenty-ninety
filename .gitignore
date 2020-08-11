@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# project build
+dist/
+
+# mac files
+.DS_Store
+
+# environment variables
+.envrc
+
+# netlify-cli config
+.netlify/
