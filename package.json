@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:css": "postcss src/assets/css/main.css -o src/assets/css/bundle.css",
     "build": "eleventy",
     "clean": "rm -rf dist",
+    "develop:css": "postcss src/assets/css/main.css -o src/assets/css/bundle.css --watch",
     "develop": "eleventy --serve --port 8000",
     "start": "develop"
   },
@@ -13,6 +15,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.1",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "tailwindcss": "^1.6.2"
   }
 }
