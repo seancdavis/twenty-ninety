@@ -1,13 +1,17 @@
 const { src, dest, series, watch } = require("gulp")
+const fs = require("fs")
 
 const gulp = {
   clean: require("gulp-clean"),
   connect: require("gulp-connect"),
   postcss: require("gulp-postcss"),
-  run: require("gulp-run-command").default
+  run: require("gulp-run-command").default,
+  webpack: require("webpack-stream"),
+  webpackCompiler: require("webpack"),
+  vinylNamed: require("vinyl-named")
 }
 
-const eleventyExts = [
+const htmlExts = [
   "11tydata.js",
   "json",
   "html",
@@ -33,18 +37,27 @@ const css = () => {
   return src("./src/assets/css/*.css").pipe(gulp.postcss()).pipe(dest("./dist/assets/css"))
 }
 
-const eleventy = () => {
+const html = () => {
   return gulp.run("eleventy")()
 }
 
-const reload = () => {
+const js = () => {
+  return src("./src/assets/js/*.js")
+    .pipe(gulp.vinylNamed())
+    .pipe(gulp.webpack(require("./webpack.config.js"), gulp.webpackCompiler, reload))
+    .pipe(dest("./dist/assets/js"))
+}
+
+const reload = (done) => {
+  if (!fs.existsSync("dist")) return done ? done() : null
   return src("./dist").pipe(gulp.connect.reload())
 }
 
 const develop = (done) => {
   clean()
-  eleventy()
+  html()
   css()
+  js()
 
   gulp.connect.server({
     root: "dist",
@@ -53,12 +66,12 @@ const develop = (done) => {
   })
 
   cssFiles.map((file) => watch(file, series(css, reload)))
-  eleventyExts.map((ext) => watch(`./src/**/*.${ext}`, series(eleventy, css, reload)))
+  htmlExts.map((ext) => watch(`./src/**/*.${ext}`, series(html, css, reload)))
 
   done()
 }
 
-const build = series(clean, css, eleventy)
+const build = series(clean, css, html)
 
 module.exports = {
   build: build,
@@ -66,5 +79,7 @@ module.exports = {
   css: css,
   default: build,
   develop: develop,
-  eleventy: eleventy
+  html: html,
+  js: js,
+  reload: reload
 }
