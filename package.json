@@ -7,7 +7,8 @@
     "build": "gulp build",
     "clean": "gulp clean",
     "develop": "gulp develop",
-    "start": "develop"
+    "start": "develop",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "gulp-connect": "^5.7.0",
     "gulp-postcss": "^8.0.0",
     "gulp-run-command": "^0.0.10",
+    "jest": "^26.4.0",
     "netlify-plugin-a11y": "^0.0.12",
     "netlify-plugin-inline-critical-css": "^1.1.3",
     "netlify-plugin-subfont": "^5.0.6",
