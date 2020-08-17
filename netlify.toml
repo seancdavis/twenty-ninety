@@ -1,3 +1,20 @@
 [build]
   command = "yarn build"
   publish = "dist"
+
+# [[plugins]]
+#   package = "/.netlify/netlify-plugin-jest"
+
+[[plugins]]
+  package = "netlify-plugin-subfont"
+    [plugins.inputs]
+      entryPoints = ["dist/*.html"]
+
+[[plugins]]
+  package = "netlify-plugin-inline-critical-css"
+
+[[plugins]]
+  package = "netlify-plugin-a11y"
+    [plugins.inputs]
+      checkPaths = ['/']
+      resultMode = "warn"

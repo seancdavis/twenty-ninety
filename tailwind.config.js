@@ -29,10 +29,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      headings: ["DM Serif Display", "serif"],
-      sans: ["Lato", "sans-serif"],
-      serif: ["Source Serif Pro", "serif"],
-      subheadings: ["Lato", "sans-serif"]
+      default: ["Source Sans Pro", "sans-serif"]
     }
   },
   variants: {},
