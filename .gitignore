@@ -15,6 +15,3 @@ dist/
 
 # logs and errors
 yarn-error.log
-
-# Local Netlify folder
-.netlify
