@@ -2,8 +2,8 @@
   command = "yarn build"
   publish = "dist"
 
-# [[plugins]]
-#   package = "/.netlify/netlify-plugin-jest"
+[[plugins]]
+  package = "/.netlify/netlify-plugin-jest"
 
 [[plugins]]
   package = "netlify-plugin-subfont"
