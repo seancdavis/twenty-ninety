@@ -1,3 +1,5 @@
+import "./lib/analytics"
+
 console.log("Running Twenty-Ninety Starter ...")
 
-module.exports = {}
+export default {}

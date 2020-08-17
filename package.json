@@ -15,6 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@analytics/google-analytics": "^0.5.0",
+    "analytics": "^0.5.5",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
