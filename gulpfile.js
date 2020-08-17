@@ -71,7 +71,7 @@ const develop = (done) => {
   done()
 }
 
-const build = series(clean, css, html)
+const build = series(clean, html, css, js)
 
 module.exports = {
   build: build,

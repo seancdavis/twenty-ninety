@@ -11,7 +11,10 @@ dist/
 .envrc
 
 # netlify-cli config
-.netlify/
+.netlify/state.json
 
 # logs and errors
 yarn-error.log
+
+# Local Netlify folder
+.netlify
