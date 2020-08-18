@@ -3,7 +3,9 @@
 Here is a list of things to document:
 
 - CSS / PostCSS / Tailwind
-- JS / Webpack / Jest
+- JS / Webpack / onInit
+- Jest
+- Google Analytics
 - Gulp (+ Config)
 - Fonts
 - Netlify Plugins
