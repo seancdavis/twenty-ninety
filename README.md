@@ -8,4 +8,6 @@ Here is a list of things to document:
 - Google Analytics
 - Gulp (+ Config)
 - Fonts
-- Netlify Plugins
+- Netlify Requirements + Config + Plugins
+- Environment Variables
+- Eleventy + Utils
