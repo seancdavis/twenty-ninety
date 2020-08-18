@@ -28,6 +28,7 @@ const htmlExts = [
 ]
 
 const cssFiles = ["./src/**/*.css", "./tailwind.config.js", "./postcss.config.js"]
+const htmlFiles = htmlExts.map((ext) => `./src/**/*.${ext}`).concat(".eleventy.js")
 
 const clean = () => {
   return src("dist", { allowEmpty: true, read: false }).pipe(gulp.clean())
@@ -66,7 +67,7 @@ const develop = (done) => {
   })
 
   cssFiles.map((file) => watch(file, series(css, reload)))
-  htmlExts.map((ext) => watch(`./src/**/*.${ext}`, series(html, css, reload)))
+  htmlFiles.map((file) => watch(file, series(html, css, reload)))
 
   done()
 }
