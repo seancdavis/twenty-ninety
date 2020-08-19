@@ -1,21 +1,24 @@
-const utils = require("./utils")
+const glob = require("glob")
+const fs = require("fs")
+const path = require("path")
+
+const config = require("./eleventy.config")
 
 module.exports = function (eleventyConfig) {
   // --- Direct Copies --- //
   eleventyConfig.addPassthroughCopy({ static: "/" })
   eleventyConfig.addPassthroughCopy("src/assets/images")
 
-  // --- Transforms --- //
-  Object.entries(utils.transforms).map(([name, func]) => eleventyConfig.addTransform(name, func))
-
-  // --- Config --- //
-  return {
-    dir: {
-      includes: "_includes",
-      input: "src",
-      layouts: "_layouts",
-      output: "dist"
-    },
-    markdownTemplateEngine: "njk"
+  // --- Utils --- //
+  const loadUtils = (type) => {
+    const dir = path.join(__dirname, `./utils/${type}`)
+    const files = glob.sync(path.join(dir, "*.js"), { ignore: path.join(dir, "*.spec.js") })
+    files.map((file) => require(file)(eleventyConfig))
   }
+
+  loadUtils("transforms")
+
+  // Return the config object. (This is what actually sets the config for
+  // Eleventy. It was written above for reference within utils.)
+  return config
 }
