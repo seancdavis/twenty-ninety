@@ -4,3 +4,17 @@ layout: default
 
 <h1 class="font-headings text-2xl">Twenty Ninety</h1>
 <p>I am the home page ...</p>
+
+<div class="container max-w-xs">
+  {% svg "seancdavis-logo" %}
+</div>
+
+<div class="container max-w-md">
+  {% markdown %}
+
+## Hello There
+
+This is markdown, being rendered inside an HTML element. Pretty cool, eh?
+
+  {% endmarkdown %}
+</div>
