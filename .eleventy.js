@@ -23,7 +23,6 @@ const getUtilFiles = () => {
     // Import the file.
     const module = require(file)
     // If everything looks good, return the module.
-    console.log(typeof lodash.get(module, "default"))
     if (typeof lodash.get(module, "default") === "function") return module
     // Otherwise, we have a problem. Gather the appropriate message.
     const error = module.default
