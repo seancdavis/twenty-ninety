@@ -6,7 +6,7 @@ const htmlmin = require("html-minifier")
  * @param {string} content HTML content
  * @param {string} outputPath Path to which the file will be written
  */
-const compressHtml = (content, outputPath) => {
+exports.compressHtml = (content, outputPath) => {
   // If not an HTML file or not a production build, return the content as it
   // was.
   if (!outputPath.endsWith(".html") || process.env.ELEVENTY_ENV !== "production") return content
@@ -27,6 +27,6 @@ const compressHtml = (content, outputPath) => {
  *
  * @param {object} eleventyConfig Eleventy's configuration object
  */
-module.exports = (eleventyConfig) => {
-  return eleventyConfig.addTransform("compress-html", compressHtml)
+exports.default = (eleventyConfig) => {
+  return eleventyConfig.addTransform("compress-html", exports.compressHtml)
 }
