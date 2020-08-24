@@ -1,4 +1,4 @@
-const compressHtml = require("./compress-html")
+const { compressHtml } = require("./compress-html")
 
 const mockInput = `
 <span>Hello</span>
