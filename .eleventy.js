@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   // --- Direct Copies --- //
   //
   eleventyConfig.addPassthroughCopy({ static: "/" })
-  eleventyConfig.addPassthroughCopy("src/assets/images")
+  eleventyConfig.addPassthroughCopy({ "src/_assets/images": "assets/images" })
   //
   // --- Utils --- //
   //
