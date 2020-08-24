@@ -6,6 +6,11 @@ layout: default
 <p>I am the home page ...</p>
 
 <div class="container max-w-xs">
+  <p>This is a component ...</p>
+  {% component "button", url = "/", label = "Click Me!", theme = "blue" %}
+</div>
+
+<div class="container max-w-xs">
   {% svg "seancdavis-logo" %}
 </div>
 

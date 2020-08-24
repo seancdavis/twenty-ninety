@@ -4,6 +4,7 @@
       true,
       {
         "ignoreAtRules": [
+          "import-glob",
           "tailwind",
           "screen"
         ]
