@@ -3,9 +3,7 @@ const defaults = require("../../_data/seo_defaults.json")
 
 describe("SEO", () => {
   it("throws an error if nothing passed", () => {
-    expect(() => {
-      const seo = transform()
-    }).toThrow()
+    expect(() => transform()).toThrow()
   })
 
   it("has global defaults", () => {
