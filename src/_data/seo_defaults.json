@@ -1,0 +1,13 @@
+{
+  "base_url": "https://twenty-ninety.netlify.app",
+  "description": "A component-based Eleventy starter kit.",
+  "image": "/default-meta.png",
+  "og": {
+    "type": "website"
+  },
+  "title_template": "%s | Twenty Ninety",
+  "title": "Twenty Ninety",
+  "twitter": {
+    "card": "summary_large_image"
+  }
+}

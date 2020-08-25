@@ -22,9 +22,7 @@ Here is a list of things to document:
 - Eleventy + Utils
 - Markdown
 - SVGs / Images
-
-## Roadmap
-
+- SEO
 - Images
 - Components
 
