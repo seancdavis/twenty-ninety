@@ -13,7 +13,7 @@ const getUtilFiles = () => {
   // Pattern of files to require from the directory.
   const globFilesPattern = path.join(dir, "**/*.js")
   // Pattern of files to ignore from the directory.
-  const ignoreFiles = ["**/*.spec.js", "_**/*.js", "**/_**/*.js", "**/_*.js"]
+  const ignoreFiles = ["**/*.spec.js", "_**/*.js", "**/_*/**/*.js", "**/_*.js"]
   const ignoreFilesPattern = ignoreFiles.map((pattern) => path.join(dir, pattern))
   // Find all relevant files.
   let files = glob.sync(globFilesPattern, { ignore: ignoreFilesPattern })
@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   // --- Direct Copies --- //
   //
   eleventyConfig.addPassthroughCopy({ static: "/" })
-  eleventyConfig.addPassthroughCopy("src/assets/images")
+  eleventyConfig.addPassthroughCopy({ "src/_assets/images": "assets/images" })
   //
   // --- Utils --- //
   //
