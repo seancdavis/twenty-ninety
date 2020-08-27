@@ -1,0 +1,11 @@
+# Env
+export NODE_ENV="development"
+export ELEVENTY_ENV="development"
+
+# Analytics
+export GOOGLE_ANALYTICS_ID=""
+export ANALYTICS_APP_NAME=""
+
+# Imgix
+export IMGIX_DOMAIN=""
+export IMGIX_TOKEN=""
