@@ -35,7 +35,9 @@ const clean = () => {
 }
 
 const css = () => {
-  return src("./src/_assets/css/*.css").pipe(gulp.postcss()).pipe(dest("./dist/assets/css"))
+  return src("./src/_assets/css/*.css")
+    .pipe(gulp.postcss())
+    .pipe(dest("./dist/twenty-ninety/assets/css"))
 }
 
 const html = () => {
@@ -46,7 +48,7 @@ const js = () => {
   return src("./src/_assets/js/*.js")
     .pipe(gulp.vinylNamed())
     .pipe(gulp.webpack(require("./webpack.config.js"), gulp.webpackCompiler, reload))
-    .pipe(dest("./dist/assets/js"))
+    .pipe(dest("./dist/twenty-ninety/assets/js"))
 }
 
 const reload = (done) => {

@@ -2,7 +2,7 @@
 layout: default
 title: Twenty Ninety
 seo:
-  image: /assets/images/meta/twenty-ninety--meta--home.png
+  image: /twenty-ninety/assets/images/meta/twenty-ninety--meta--home.png
   description: A component-based Eleventy starter kit.
 ---
 
