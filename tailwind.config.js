@@ -27,9 +27,6 @@ module.exports = {
         white: "var(--color-white)",
         yellow: "var(--color-yellow)"
       }
-    },
-    fontFamily: {
-      default: ["Source Sans Pro", "sans-serif"]
     }
   },
   variants: {},
