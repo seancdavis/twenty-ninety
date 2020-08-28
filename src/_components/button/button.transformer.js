@@ -2,9 +2,15 @@ const defaults = {
   theme: "blue"
 }
 
-module.exports = ({ theme, ...props }) => {
+module.exports = ({ __keywords, label, theme, url, ...props }) => {
+  const attrs = Object.entries(props)
+    .map(([k, v]) => `${k}=${v}`)
+    .join(" ")
+
   return {
-    ...props,
-    theme: theme || defaults.theme
+    attrs: attrs,
+    label: label,
+    theme: theme || defaults.theme,
+    url: url
   }
 }
