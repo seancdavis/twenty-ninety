@@ -1,6 +1,30 @@
-# Twenty Ninety [![Netlify Status](https://api.netlify.com/api/v1/badges/40e8672c-0101-4d88-8dbc-225257970fb4/deploy-status)](https://app.netlify.com/sites/twenty-ninety/deploys)
+---
+layout: default
+title: Twenty Ninety
+seo:
+  image: /assets/images/meta/twenty-ninety--meta--home.png
+  description: A component-based Eleventy starter kit.
+---
 
-Twenty Ninety is a component-based [Eleventy](https://www.11ty.dev/) starter kit. It comes with lots of opinions, all designed to help you build websites faster (and have fun doing it)!
+<div class="bg-blue mb-12">
+  <div class="container text-center text-white py-24">
+    <h1>Twenty Ninety</h1>
+    <p class="text-lg mb-8">
+      A component-ready Eleventy starter kit by
+      <a href="https://twitter.com/seancdavis29" class="text-white underline" target="_blank">
+        @seancdavis
+      </a>.
+    </p>
+    {% component "button",
+      url = "https://github.com/seancdavis/twenty-ninety#getting-started",
+      label = "Get Started",
+      theme = "white",
+      target = "_blank" %}
+  </div>
+</div>
+
+<div class="container max-w-2xl">
+  {% markdown %}
 
 ## Getting Started
 
@@ -37,23 +61,6 @@ Therefore, the longer-term goal with this project is to offer it as a package so
 ## Features
 
 There is a lot going on above what Eleventy offers out of the box. Here are those features. If you have questions, feel free to [open an issue](https://github.com/seancdavis/twenty-ninety/issues/new) or [start a conversation on Twitter](https://twitter.com/seancdavis29).
-
-Here's a list:
-
-- [Gulp](#gulp)
-- [Eleventy](#eleventy)
-- [CSS](#css)
-- [JavaScript](#javascript)
-- [Netlify](#netlify)
-- [Testing](#testing)
-- [Environment Variables](#environment-variables)
-- [Fonts](#fonts)
-- [Components](#components)
-- [Images](#images)
-- [Markdown](#markdown)
-- [Google Analytics](#google-analytics)
-- [SEO](#seo)
-- [Yarn](#yarn)
 
 ### Gulp
 
@@ -174,7 +181,10 @@ There must be at least one file in the directory: `[name].template.njk`. (At thi
 It gets rendered on the page using a `component` shortcode. For example:
 
 ```njk
-{% component "button", url = "/", label = "Click Me!", theme = "blue" %}
+component "button",
+  url = "/",
+  label = "Click Me!",
+  theme = "blue"
 ```
 
 The first argument tells the shortcode which component to render (`button`), while the rest are sent as variables to the component.
@@ -189,17 +199,7 @@ Lastly, if you want to bring custom styles, you can add a `[name].styles.css` fi
 
 ### Markdown
 
-Markdown is [supported as a templating language with Eleventy](https://www.11ty.dev/docs/languages/markdown/). However, it can't be rendered in other templates. To remedy that problem, this project brings a `markdown` shortcode to render markdown within other template files. For example, in a nunjucks file, you could write the following:
-
-```njk
-<div>
-  {% markdown %}
-## This is a heading
-  {% endmarkdown %}
-</div>
-```
-
-And voila! The markdown will be rendered!
+Markdown is [supported as a templating language with Eleventy](https://www.11ty.dev/docs/languages/markdown/). However, it can't be rendered in other templates. To remedy that problem, this project brings a `markdown` shortcode to render markdown within other template files.
 
 This feature uses [markdown-it](https://github.com/markdown-it/markdown-it) and can be found in `utils/shortcodes/markdown.js`. It also supports syntax highlighting via [Highlight.js](https://highlightjs.org/), bringing in the GitHub theme by default.
 
@@ -264,3 +264,7 @@ If you'd like what you see here but have found a bug or would like to add a feat
 If you have an idea or found a bug, but can't or don't want to work it, feel free to [create an issue](https://github.com/seancdavis/twenty-ninety/issues/new).
 
 If you'd like to chat about the project, the best way to start the conversation is with [a message on Twitter](https://twitter.com/seancdavis29).
+
+{% endmarkdown %}
+
+  </div>
