@@ -3,7 +3,7 @@ module.exports = {
     includes: "_includes",
     input: "src",
     layouts: "_layouts",
-    output: "dist"
+    output: "dist/twenty-ninety"
   },
   markdownTemplateEngine: "njk"
 }
