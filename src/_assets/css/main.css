@@ -3,6 +3,9 @@
 
 @import "./tailwind/base";
 
+@import "./global/base.css";
+@import "./global/code-blocks.css";
+
 @import-glob "../../_components/**/*.css";
 
 @import "./tailwind/components";

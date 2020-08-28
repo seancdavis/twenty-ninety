@@ -1,0 +1,27 @@
+@import "../../../../node_modules/highlight.js/styles/github.css";
+
+pre {
+  @apply mb-4;
+
+  code,
+  .hljs {
+    @apply bg-gray-light
+      p-4
+      rounded-md
+      text-sm;
+  }
+
+  code:not(.hljs) {
+    @apply block
+      overflow-x-scroll
+      text-black;
+  }
+}
+
+code {
+  @apply bg-gray-light
+    inline-block
+    p-1
+    rounded-md
+    text-xs;
+}

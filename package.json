@@ -27,6 +27,7 @@
     "gulp-connect": "^5.7.0",
     "gulp-postcss": "^8.0.0",
     "gulp-run-command": "^0.0.10",
+    "highlight.js": "^10.1.2",
     "html-minifier": "^4.0.0",
     "imgix-core-js": "^2.3.1",
     "jest": "^26.4.0",
