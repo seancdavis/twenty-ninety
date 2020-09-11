@@ -145,7 +145,7 @@ The main JavaScript bundle is loaded onto the page from the foot include (`src/_
 
 #### JavaScript Utilities
 
-THe project is also setup for injecting global utilities. The only one included by default is the _scan links_ utility (`src/_assets/js/utils/scan-links.js`). When the page is read, the link scanner looks through all anchor tags. If it determines the `href` value is to an external URL, it will add `target="_blank"` and `rel="noopener"` attributes to the tag.
+The project is also setup for injecting global utilities. The only one included by default is the _scan links_ utility (`src/_assets/js/utils/scan-links.js`). When the page is read, the link scanner looks through all anchor tags. If it determines the `href` value is to an external URL, it will add `target="_blank"` and `rel="noopener"` attributes to the tag.
 
 If you'd like to remove this functionality, delete the file and remove the import line from `main.js`. Or, if you want to adjust the attributes that are added, you can edit the `scan-links.js` file.
 
