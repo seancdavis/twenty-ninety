@@ -11,13 +11,12 @@ seo:
     <h1>Twenty Ninety</h1>
     <p class="text-lg mb-8">
       A component-ready Eleventy starter kit by
-      <a href="https://twitter.com/seancdavis29" class="text-white underline" target="_blank">@seancdavis</a>.
+      <a href="https://twitter.com/seancdavis29" class="text-white underline">@seancdavis</a>.
     </p>
     {% component "button",
       url = "https://github.com/seancdavis/twenty-ninety#getting-started",
       label = "Get Started",
-      theme = "white",
-      target = "_blank" %}
+      theme = "white" %}
   </div>
 </div>
 
