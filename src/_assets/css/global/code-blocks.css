@@ -25,3 +25,20 @@ code {
     rounded-md
     text-xs;
 }
+
+/* --- Syntax Highlighting Accessibility Overrides --- */
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #00506b;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #a20b31;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #505049;
+}

@@ -127,6 +127,7 @@ However, it is recommended that with the current Webpack config, you only use a 
 ```js
 console.log(App)
 // => Module {default: {…}, __esModule: true, Symbol(Symbol.toStringTag): "Module"}
+
 console.log(App.default)
 // => {}
 ```
