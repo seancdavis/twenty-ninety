@@ -143,6 +143,12 @@ export default {}
 
 The main JavaScript bundle is loaded onto the page from the foot include (`src/_includes/layout/foot.njk`).
 
+#### JavaScript Utilities
+
+THe project is also setup for injecting global utilities. The only one included by default is the _scan links_ utility (`src/_assets/js/utils/scan-links.js`). When the page is read, the link scanner looks through all anchor tags. If it determines the `href` value is to an external URL, it will add `target="_blank"` and `rel="noopener"` attributes to the tag.
+
+If you'd like to remove this functionality, delete the file and remove the import line from `main.js`. Or, if you want to adjust the attributes that are added, you can edit the `scan-links.js` file.
+
 ### Netlify
 
 This project is built to be deployed with [Netlify](https://netlify.com). There's even a button above to do it with just a couple clicks!
