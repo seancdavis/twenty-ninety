@@ -8,13 +8,14 @@ pre {
     @apply bg-gray-light
       p-4
       rounded-md
-      text-sm;
+      text-sm
+      whitespace-pre-wrap;
   }
 
   code:not(.hljs) {
     @apply block
-      overflow-x-scroll
-      text-black;
+      text-black
+      whitespace-pre-wrap;
   }
 }
 

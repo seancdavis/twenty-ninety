@@ -98,7 +98,10 @@ Each plugin (utility) requires a **single named export** as `default`. Check out
 
 ```js
 exports.default = (eleventyConfig) => {
-  eleventyConfig.addPairedShortcode("markdown", (input) => exports.renderMarkdown(input))
+  eleventyConfig.addPairedShortcode(
+    "markdown",
+    (input) => exports.renderMarkdown(input)
+  )
 }
 ```
 
