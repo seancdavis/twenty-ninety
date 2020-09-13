@@ -10,7 +10,7 @@ seo:
   <div class="container text-center text-white py-24">
     <h1>Twenty Ninety</h1>
     <p class="text-lg mb-8">
-      A component-ready Eleventy starter kit by
+      A production-ready Eleventy starter kit by
       <a href="https://twitter.com/seancdavis29" class="text-white underline">@seancdavis</a>.
     </p>
     {% component "button",
@@ -98,10 +98,7 @@ Each plugin (utility) requires a **single named export** as `default`. Check out
 
 ```js
 exports.default = (eleventyConfig) => {
-  eleventyConfig.addPairedShortcode(
-    "markdown",
-    (input) => exports.renderMarkdown(input)
-  )
+  eleventyConfig.addPairedShortcode("markdown", (input) => exports.renderMarkdown(input))
 }
 ```
 
