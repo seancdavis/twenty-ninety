@@ -11,7 +11,7 @@ seo:
   <div class="container text-center text-white py-24">
     <h1>Twenty Ninety</h1>
     <p class="text-lg mb-8">
-      A production-ready Eleventy starter kit by
+      An optimized, production-ready Eleventy starter kit by
       <a href="https://twitter.com/seancdavis29" class="text-white underline">@seancdavis</a>.
     </p>
     {% component "button",
