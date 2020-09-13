@@ -2,6 +2,7 @@
 layout: default
 title: Twenty Ninety
 seo:
+  title_template: "%s | Sean C Davis"
   image: /twenty-ninety/assets/images/meta/twenty-ninety--meta--home.png
   description: A component-based Eleventy starter kit.
 ---
@@ -98,10 +99,7 @@ Each plugin (utility) requires a **single named export** as `default`. Check out
 
 ```js
 exports.default = (eleventyConfig) => {
-  eleventyConfig.addPairedShortcode(
-    "markdown",
-    (input) => exports.renderMarkdown(input)
-  )
+  eleventyConfig.addPairedShortcode("markdown", (input) => exports.renderMarkdown(input))
 }
 ```
 
